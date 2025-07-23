@@ -6,7 +6,7 @@ const Login = () => {
   const [form, setForm] = useState({ username: "", password: "" });
   const navigate = useNavigate();
 
-  const url = "http://localhost:5000";
+  const url = "https://growforce.onrender.com";
 
 
   const handleChange = (e) => {
