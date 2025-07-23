@@ -1,0 +1,17 @@
+.table th, .table td {
+  vertical-align: middle;
+}
+
+.card {
+  border-radius: 12px;
+  border: none;
+}
+
+.table thead th {
+  background-color: #0d6efd;
+  color: white;
+}
+
+.btn-sm {
+  min-width: 70px;
+}
