@@ -5,8 +5,8 @@ import { useNavigate } from 'react-router-dom';
 const AllEmps = () => {
   const [employees, setEmployees] = useState([]);
   const navigate = useNavigate();
-  // const url = "http://localhost:5000"
-   const API_URL = import.meta.env.VITE_API_URL;
+   const url = "http://localhost:5000/api"
+
 
   useEffect(() => {
     fetchEmployees();
@@ -16,7 +16,7 @@ const AllEmps = () => {
     const token = localStorage.getItem("token");
 
     try {
-      const res = await axios.get(`${API_URL}/allemp`, {
+      const res = await axios.get(`${url}/allemp`, {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -36,7 +36,7 @@ const AllEmps = () => {
     if (!confirm) return;
 
     try {
-      await axios.delete(`${API_URL}/delete/${id}`, {
+      await axios.delete(`${url}/delete/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`
         }
