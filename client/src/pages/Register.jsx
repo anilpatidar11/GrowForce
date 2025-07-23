@@ -15,7 +15,7 @@ const Register = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-   const url = "http://localhost:5000";
+   const url = "https://growforce.onrender.com";
 
 
   const handleSubmit = async (e) => {
