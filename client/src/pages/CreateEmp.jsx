@@ -22,7 +22,7 @@ const CreateEmp = () => {
 
 
 
-    const url = "http://localhost:5000";
+    const url = "https://growforce.onrender.com";
   
   //  Auto-fill fields when editing
   useEffect(() => {
