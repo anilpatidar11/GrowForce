@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 const AllEmps = () => {
   const [employees, setEmployees] = useState([]);
   const navigate = useNavigate();
-   const url = "http://localhost:5000"
+   const url = "https://growforce.onrender.com"
 
 
   useEffect(() => {
