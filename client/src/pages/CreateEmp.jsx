@@ -22,14 +22,14 @@ const CreateEmp = () => {
 
 
 
-    const url = "http://localhost:5000/api";
+    const url = "http://localhost:5000";
   
   //  Auto-fill fields when editing
   useEffect(() => {
     const fetchEmployee = async () => {
       const token = localStorage.getItem('token');
       try {
-        const res = await axios.get(`${url}/getemp/${editId}`, {
+        const res = await axios.get(`${url}/api/getemp/${editId}`, {
           headers: { Authorization: `Bearer ${token}` }
         });
 
@@ -56,12 +56,12 @@ const CreateEmp = () => {
 
     try {
       if (isEditMode) {
-        await axios.put(`${url}/edit/${editId}`, formData, {
+        await axios.put(`${url}/api/edit/${editId}`, formData, {
           headers: { Authorization: `Bearer ${token}` }
         });
         alert('Employee updated successfully');
       } else {
-        await axios.post(`${url}/add`, formData, {
+        await axios.post(`${url}/api/add`, formData, {
           headers: { Authorization: `Bearer ${token}` }
         });
         alert('Employee added successfully');

@@ -6,7 +6,7 @@ const Login = () => {
   const [form, setForm] = useState({ username: "", password: "" });
   const navigate = useNavigate();
 
-  const url = "http://localhost:5000/api";
+  const url = "http://localhost:5000";
 
 
   const handleChange = (e) => {
@@ -16,7 +16,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post(`${url}/login`, form); 
+      const res = await axios.post(`${url}/api/login`, form); 
       localStorage.setItem("token", res.data.token);
       alert(res.data.message);
       navigate('/');

@@ -15,13 +15,13 @@ const Register = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-   const url = "http://localhost:5000/api";
+   const url = "http://localhost:5000";
 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
- const res = await axios.post(`${url}/register`, form);
+ const res = await axios.post(`${url}/api/register`, form);
       alert(res.data.message);
     } catch (err) {
       alert(err.response?.data?.message || "Error");
